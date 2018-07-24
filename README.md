@@ -5,7 +5,7 @@ Some detail can go to https://github.com/shekkizh/FCN.tensorflow.git
 #FCN implementation
 This file FCN.py uses pre-train model "VGG-19" and FCN-8s and you can refer to the paper https://people.eecs.berkeley.edu/~jonlong/long_shelhamer_fcn.pdf
 
-#What I do?
+#What did I do?
 I use this model to train my own datasets in the field of remote sensing.
 
 #Data description
