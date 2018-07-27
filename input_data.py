@@ -89,8 +89,8 @@ def extract_sample(dataset,image_list,rows,cols):
     for i in range(0,len(image_list)):
         id=image_list[i]
         id_i=math.floor(id/cols)+1-1
-        id_j=id-(id_i-1)*cols-1
-        imgdata=dataset.imgdata[0:3, id_i:(id_i+patch_size),id_j:(id_j+patch_size)].copy()
+        id_j=id-(id_i-1)*cols-1#fatal bug
+        imgdata=dataset.imgdata[0:3, id_i*win_stride:(id_i*win_stride+patch_size),id_j*win_stride:(id_j*win_stride+patch_size)].copy()
         imgdata=np.transpose(imgdata,(1,2,0))
         #imagedata need regularization
         #[0-65535]->[0,1]
